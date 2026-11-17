@@ -1,11 +1,31 @@
 .card {
-  border: 2px solid grey;
+  border: 6px solid grey;
+  background-color: beige;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px black;
+  max-width: 500px;
+  margin-bottom: 5px;
+}
+
+.card button {
+  margin: 0;
+}
+
+button {
+  padding: 8px 7px;
+  margin: 5px 5px;
+}
+
+button:disabled {
+  border: none;
+  background-color: rgb(201, 201, 201);
 }
 
 .known {
-  border: 2px solid green;
+  border: 6px solid green;
 }
 
 .unknown {
-  border: 2px solid red;
+  border: 6px solid red;
 }
