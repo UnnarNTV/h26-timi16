@@ -1,0 +1,11 @@
+.card {
+  border: 2px solid grey;
+}
+
+.known {
+  border: 2px solid green;
+}
+
+.unknown {
+  border: 2px solid red;
+}
