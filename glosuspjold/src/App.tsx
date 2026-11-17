@@ -3,6 +3,7 @@ import "./App.css";
 import StartScreen from "./components/StartScreen";
 import { cards } from "./cards";
 import Flashcard from "./components/Flashcard";
+import Summary from "./components/Summary";
 
 type Screen = "start" | "cards" | "done";
 
@@ -28,6 +29,13 @@ function App() {
     }
     setIndex(index + 1);
     setFlipped(false);
+  }
+
+  function handleRestart() {
+    setIndex(0);
+    setFlipped(false);
+    setAnswers([]);
+    setScreen("start");
   }
 
   return (
@@ -71,7 +79,9 @@ function App() {
           </button>
         </>
       )}
-      {screen === "done" && <p>Hér koma niðurstöður</p>}
+      {screen === "done" && (
+        <Summary cards={cards} answers={answers} onRestart={handleRestart} />
+      )}
     </main>
   );
 }
